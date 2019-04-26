@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+<body>
+        <div class='container'>
+            <form class="form-5 clearfix" name='registerForm' id='registerForm' action="updatePage" method="POST"
+        enctype="multipart/form-data">
+            <table class="table table-hover">
+                <tr><td colspan=2><img src="../../upload/{{data.fileName}}" style="border-radius: 50%;"></td></tr>
+              
+               <tr><td><b>Name</b></td><td><input type="text" value="{{data.cname}}" name="cname" id="cname"></td></tr>
+               <tr><td><b>Contact Number</b></td><td><input type="text" value="{{data.contact}}" name="contact" id="contact"></td></tr>
+               <tr><td><b>Email</b></td><td><input type="text" value="{{data.email}}" id="email" name="email"></td></tr>
+               <tr><td><b>Date Of Birth</b></td><td><input type="date" value="{{data.dob}}" id="dob" name="dob"</td></tr>
+               <tr><td colspan=2><button type="submit" name="submit" id="updateContactBtn">Edit</button></td></tr>
+            </table>
+        </form></div> 
+</body>
+
+</html>

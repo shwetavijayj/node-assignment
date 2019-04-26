@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+<body>
+        <div class='container'>
+            <table class="table table-hover">
+               <tr><td colspan=2><img src="../../upload/{{data.fileName}}" style="border-radius: 50%;"></td></tr>
+               <tr><td><b>Name</b></td><td>{{data.cname}}</td></tr>
+               <tr><td><b>Contact Number</b></td><td>{{data.contact}}</td></tr>
+               <tr><td><b>Email</b></td><td>{{data.email}}</td></tr>
+               <tr><td><b>Date Of Birth</b></td><td>{{data.dob}}</td></tr>
+               <tr><td><a href="/login/update"><b><u>Edit</u></b></a> &nbsp;&nbsp;
+               <a href="/login/delete"><b><u>Delete Account</u></b></a>
+               </td><td><a href="/"><b><u>Logout</u></b></a></td></tr>
+            </table>
+        </div> 
+</body>
+
+</html>

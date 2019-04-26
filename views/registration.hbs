@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function validName() {
+            var cname = document.forms["registerForm"]["cname"].value;
+            if (cname.length <= 8) {
+                alert('Name should be atleast 8 character long.');
+            }
+            else {
+
+            }
+        }
+        function validEmail() {
+            var email = document.forms["registerForm"]["email"].value;
+            if (email.length <= 5) {
+                alert('Enter valid email');
+            }
+            else {
+                var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+                if (reg.test(email) == false) {
+                    alert('Enter valid email');
+                }
+            }
+        }
+        function validContact() {
+        var contact = document.forms["registerForm"]["contact"].value;
+       if (contact.length < 10) {
+                alert('Contact number should be atleast 10 character long.');
+            }
+            else {
+
+            }
+    }
+    function validPassword() {
+       var password = document.forms["registerForm"]["password"].value;
+       if (password.length <= 8) {
+                alert('Password should be atleast 10 character long.');
+            }
+           
+    }    
+    </script>
+    <style>
+        .required:after { content:" *"; }
+    </style>
+</head>
+
+<body>
+
+    <form class="form-5 clearfix" name='registerForm' id='registerForm' action="register/register1" method="POST"
+        enctype="multipart/form-data">
+        <div class='container'>
+            <table class="table table-hover">
+                <tr><td><div class="required">Enter Name</div></td><td><input type="text" title="This field is mandatory" id="cname" name="cname" placeholder="Name"
+                autofocus autocomplete="off" onfocusout="validName()" required> </td></tr>
+             
+               <tr><td><div class="required">Contact Number</div></td><td><input type="text" id="contact" title="This field is mandatory" required name="contact" placeholder="Contact Number"
+                autofocus autocomplete="off" onfocusout="validContact()"></td></tr> 
+               <tr><td><div class="required">Email</div></td><td><input type="text" id="email" name="email" title="This field is mandatory" required placeholder="Email"
+                autofocus autocomplete="off" onfocusout="validEmail()"></td></tr> 
+               <tr><td><div class="required">Password</div></td><td><input type="password" id="password" name="password" required title="This field is mandatory"
+                placeholder="password" autofocus autocomplete="off" onfocusout="validPassword()"></td></tr> 
+               <tr><td>Birthday </td><td><input type="date" id="dob" name="dob" placeholder="Birthday" autofocus autocomplete="off"></td></tr> 
+               <tr><td>Upload Image</td><td><input type="file" name="filetoupload"></td></tr> 
+                <tr><td colspan="2"><button type="submit" name="submit" id="addContactBtn">Register</button></td><td><a href="/" title="If already registered">login</a></td></tr>
+            </table>
+        </div>
+
+    </form>
+</body>
+
+</html>
